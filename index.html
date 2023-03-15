@@ -23,6 +23,7 @@
 				height: 100vh;
 				display: flex;
 				flex-direction: column;
+				justify-content: center;
 				align-items: center;
 				text-align: center;
 			}
@@ -41,7 +42,7 @@
 	<body>
 		<section class="coming-soon">
 			<div>
-				<h2>Akan hadir segera!</h2>
+				<h2>Memasuki bulan suci Ramadhan dalam:</h2>
 				<div class="countdown">
 					<div class="container-day">
 						<h3 class="day">12</h3>
@@ -65,28 +66,36 @@
 		<script>
 			function countdown() {
 				// const countDate = new Date("Mar 23, 2023 00:00:00").getTime();
-				const countDate = new Date(
-					"Jan 1, " + (new Date().getFullYear() + 1) + " 00:00:00"
-				).getTime();
-				const now = new Date().getTime();
-				const gap = countDate - now;
+// 				const countDate = new Date(
+// 					"Jan 1, " + (new Date().getFullYear() + 1) + " 00:00:00"
+// 				).getTime();
+				const tanggal_ramadhan_2023 = new Date("Mar 22, 2023").getTime();
+// 				const now = new Date().getTime();
+// 				const gap = countDate - now;
 
-				const second = 1000;
-				const minute = second * 60;
-				const hour = minute * 60;
-				const day = hour * 24;
+// 				const second = 1000;
+// 				const minute = second * 60;
+// 				const hour = minute * 60;
+// 				const day = hour * 24;
 
-				const textDay = Math.floor(gap / day);
-				const textHour = Math.floor((gap % day) / hour);
-				const textMinute = Math.floor((gap % hour) / minute);
-				const textSecond = Math.floor((gap % minute) / second);
+// 				const textDay = Math.floor(gap / day);
+// 				const textHour = Math.floor((gap % day) / hour);
+// 				const textMinute = Math.floor((gap % hour) / minute);
+// 				const textSecond = Math.floor((gap % minute) / second);
 
-				document.querySelector(".day").innerHTML = textDay;
-				document.querySelector(".hour").innerHTML = textMinute;
-				document.querySelector(".minute").innerHTML = textHour;
-				document.querySelector(".second").innerHTML = textSecond;
-			}
-			setInterval(countdown, 1000);
+// 				document.querySelector(".day").innerHTML = textDay;
+// 				document.querySelector(".hour").innerHTML = textMinute;
+// 				document.querySelector(".minute").innerHTML = textHour;
+// 				document.querySelector(".second").innerHTML = textSecond;
+				
+				if (tanggal_ramadhan_2023.getSeconds() != new Date().getSeconds()) {
+					document.querySelector(".day").innerHTML = tanggal_ramadhan_2023.getDate();
+					document.querySelector(".hour").innerHTML = tanggal_ramadhan_2023.getHours();
+					document.querySelector(".minute").innerHTML = tanggal_ramadhan_2023.getMinutes();
+					document.querySelector(".second").innerHTML = tanggal_ramadhan_2023.getSeconds();
+				};
+			};
+			setInterval(countdown, 0);
 		</script>
 	</body>
 </html>

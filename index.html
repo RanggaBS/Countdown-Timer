@@ -69,33 +69,35 @@
 // 				const countDate = new Date(
 // 					"Jan 1, " + (new Date().getFullYear() + 1) + " 00:00:00"
 // 				).getTime();
-				const tanggal_ramadhan_2023 = new Date("Mar 22, 2023");
-// 				const now = new Date().getTime();
-// 				const gap = countDate - now;
+				const tanggal_ramadhan_2023 = new Date("Mar 22, 2023").getTime();
+				const now = new Date().getTime();
+				const gap = tanggal_ramadhan_2023 - now;
 
-// 				const second = 1000;
-// 				const minute = second * 60;
-// 				const hour = minute * 60;
-// 				const day = hour * 24;
+				const second = 1000;
+				const minute = second * 60;
+				const hour = minute * 60;
+				const day = hour * 24;
 
-// 				const textDay = Math.floor(gap / day);
-// 				const textHour = Math.floor((gap % day) / hour);
-// 				const textMinute = Math.floor((gap % hour) / minute);
-// 				const textSecond = Math.floor((gap % minute) / second);
+				const textDay = Math.floor(gap / day);
+				const textHour = Math.floor((gap % day) / hour);
+				const textMinute = Math.floor((gap % hour) / minute);
+				const textSecond = Math.floor((gap % minute) / second);
 
-// 				document.querySelector(".day").innerHTML = textDay;
-// 				document.querySelector(".hour").innerHTML = textMinute;
-// 				document.querySelector(".minute").innerHTML = textHour;
-// 				document.querySelector(".second").innerHTML = textSecond;
+				document.querySelector(".day").innerHTML = textDay;
+				document.querySelector(".hour").innerHTML = textMinute;
+				document.querySelector(".minute").innerHTML = textHour;
+				document.querySelector(".second").innerHTML = textSecond;
 				
-				if (tanggal_ramadhan_2023.getSeconds() != new Date().getSeconds()) {
-					document.querySelector(".day").innerHTML = tanggal_ramadhan_2023.getDate();
-					document.querySelector(".hour").innerHTML = tanggal_ramadhan_2023.getHours();
-					document.querySelector(".minute").innerHTML = tanggal_ramadhan_2023.getMinutes();
-					document.querySelector(".second").innerHTML = tanggal_ramadhan_2023.getSeconds();
-				};
+// 				if (tanggal_ramadhan_2023.getSeconds() != new Date().getSeconds()) {
+// 					document.querySelector(".day").innerHTML = tanggal_ramadhan_2023.getDate();
+// 					document.querySelector(".hour").innerHTML = tanggal_ramadhan_2023.getHours();
+// 					document.querySelector(".minute").innerHTML = tanggal_ramadhan_2023.getMinutes();
+// 					document.querySelector(".second").innerHTML = tanggal_ramadhan_2023.getSeconds();
+// 				};
+				
+				if () {};
 			};
-			setInterval(countdown, 0);
+			setInterval(countdown, 1000);
 		</script>
 	</body>
 </html>

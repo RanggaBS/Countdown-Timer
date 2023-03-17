@@ -64,6 +64,7 @@
 			</div>
 		</section>
 		<script>
+			let triggerUpdate_seconds = 0;
 			function countdown() {
 				// const countDate = new Date("Mar 23, 2023 00:00:00").getTime();
 // 				const countDate = new Date(
@@ -83,10 +84,13 @@
 				const textMinute = Math.floor((gap % hour) / minute);
 				const textSecond = Math.floor((gap % minute) / second);
 
-				document.querySelector(".day").innerHTML = textDay;
-				document.querySelector(".hour").innerHTML = textHour;
-				document.querySelector(".minute").innerHTML = textMinute;
-				document.querySelector(".second").innerHTML = textSecond;
+				if (triggerUpdate_seconds != (new Date().getSeconds())) {
+					let triggerUpdate_seconds = new Date().getSeconds();
+					document.querySelector(".day").innerHTML = textDay;
+					document.querySelector(".hour").innerHTML = textHour;
+					document.querySelector(".minute").innerHTML = textMinute;
+					document.querySelector(".second").innerHTML = textSecond;
+				};
 				
 // 				if (tanggal_ramadhan_2023.getSeconds() != new Date().getSeconds()) {
 // 					document.querySelector(".day").innerHTML = tanggal_ramadhan_2023.getDate();
@@ -97,7 +101,7 @@
 				
 // 				if () {};
 			};
-			setInterval(countdown, 1000);
+			setInterval(countdown, 0);
 		</script>
 	</body>
 </html>

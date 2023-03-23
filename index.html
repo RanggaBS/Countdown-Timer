@@ -42,7 +42,7 @@
 	<body>
 		<section class="coming-soon">
 			<div>
-				<h2>Memasuki bulan suci Ramadhan dalam:</h2>
+				<h2>Memasuki hari raya Idul Fitri dalam:</h2>
 				<div class="countdown">
 					<div class="container-day">
 						<h3 class="day">12</h3>
@@ -70,9 +70,10 @@
 // 				const countDate = new Date(
 // 					"Jan 1, " + (new Date().getFullYear() + 1) + " 00:00:00"
 // 				).getTime();
-				const tanggal_ramadhan_2023 = new Date("Mar 23, 2023").getTime();
+// 				const tanggal_ramadhan_2023 = new Date("Mar 23, 2023").getTime();
+				const tanggal_target = new Date("Apr 20, 2023").getTime();
 				const now = new Date().getTime();
-				const gap = tanggal_ramadhan_2023 - now;
+				const gap = tanggal_target - now;
 
 				const second = 1000;
 				const minute = second * 60;
